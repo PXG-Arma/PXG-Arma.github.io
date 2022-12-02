@@ -1,0 +1,89 @@
+/*
+ * Variable definitions
+ */
+
+:root {
+    /* Colours */
+
+    /* PXG colours */
+    --clr-pxg-orange: #f8951d;
+    --clr-pxg-red: #f1372a;
+
+    /* Font colours */
+    --clr-font-dark: #2d2c2d;
+    --clr-font-light: #eaebee;
+
+    /* Background colours */
+    --clr-bg-dark: #2d2c2d;
+    --clr-bg-light: #eaebee;
+
+    /* Highlight colours */
+    --clr-hl-green: #00953f;
+    --clr-hl-black: #242424;
+}
+
+/*
+ * Custom fonts
+ */
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url("/fonts/philosopher/Philosopher-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*
+ * Basic page looks and typography
+ */
+
+html {
+    color: var(--clr-font-light);
+    font-family: "Philosopher", sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    background-color: var(--clr-bg-dark);
+}
+
+a {
+    color: var(--clr-pxg-orange);
+}
+a:hover {
+    color: var(--clr-pxg-red);
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 28pt;
+}
+
+/*
+ * Big page parts
+ */
+
+div#wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+}
