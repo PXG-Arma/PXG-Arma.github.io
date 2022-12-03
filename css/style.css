@@ -197,7 +197,7 @@ div.text-blocks {
 }
 
 div.text-blocks > div {
-    margin: 20px;
+    margin: 20px 26px;
     max-width: 400px;
 }
 
@@ -216,7 +216,7 @@ div.text-blocks ul {
 }
 div.text-blocks li {
     list-style-type: "✚";
-    margin: 5px 0;
+    margin: 7px 0;
     padding-left: 10px;
 }
 
