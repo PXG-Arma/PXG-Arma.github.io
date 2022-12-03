@@ -18,7 +18,7 @@ begin_page($meta);
         <div class='icons-horizontal'>
             <div>
                 <h5>1.&nbsp;Safety</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/crosshair.svg'>
                 <p>Deal with enemy.</p>
                 <p>Get to hard cover.</p>
             </div>
@@ -30,13 +30,13 @@ begin_page($meta);
             </div>
             <div>
                 <h5>3.&nbsp;Report</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/radio.svg'>
                 <p>Report condition clearly.</p>
                 <p>Request medical if serious.</p>
             </div>
             <div>
                 <h5>4.&nbsp;Assist</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/casualty-carry.svg'>
                 <p>Hold the perimeter.</p>
                 <p>Assist fallen comrades.</p>
             </div>
@@ -199,7 +199,7 @@ begin_page($meta);
 
         <div class='icon-text-rows'>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/pulse.svg'>
                 <div class='text'>
                     <h5>Heart Rate</h5>
                     <ul class='no-bullets'>
@@ -210,7 +210,7 @@ begin_page($meta);
                 </div>
             </div>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/drop.svg'>
                 <div class='text'>
                     <h5>Blood Pressure</h5>
                     <ul class='no-bullets'>
@@ -305,19 +305,19 @@ begin_page($meta);
             </div>
             <div>
                 <h5>2.&nbsp;Position</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/compass.svg'>
                 <p>Move away from threats.</p>
                 <p>Mark location as "CCP".</p>
             </div>
             <div>
                 <h5>3.&nbsp;Request</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/radio.svg'>
                 <p>Request MEDEVAC to CCP.</p>
                 <p>Specify casualty's status.</p>
             </div>
             <div>
                 <h5>4.&nbsp;Help</h5>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/casualty-carry.svg'>
                 <p>Hold the position.</p>
                 <p>Load the casualty.</p>
             </div>
@@ -329,7 +329,7 @@ begin_page($meta);
 
         <div class='icon-text-blocks'>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/muscle.svg'>
                 <div class='text'>
                     <h5>Anaerobic Energy</h5>
                     <ul class='no-bullets'>
@@ -343,7 +343,7 @@ begin_page($meta);
                 </div>
             </div>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/lungs.svg'>
                 <div class='text'>
                     <h5>Aerobic Energy</h5>
                     <ul class='no-bullets'>
@@ -370,7 +370,7 @@ begin_page($meta);
 
         <div class='icon-text-blocks'>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/mountain.svg'>
                 <div class='text'>
                     <h5>Gradual Factors</h5>
                     <ul class='no-bullets'>
@@ -381,7 +381,7 @@ begin_page($meta);
                 </div>
             </div>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/sad-face.svg'>
                 <div class='text'>
                     <h5>Long-Term Effects</h5>
                     <ul class='no-bullets'>
@@ -403,7 +403,7 @@ begin_page($meta);
                 </div>
             </div>
             <div>
-                <img src='/img/icons/cross.svg'>
+                <img src='/img/icons/crosshair-slanted.svg'>
                 <div class='text'>
                     <h5>Short-Term Effects</h5>
                     <ul class='no-bullets'>

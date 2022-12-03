@@ -211,7 +211,9 @@ div.icons-horizontal h5 {
 
 div.icons-horizontal img {
     display: block;
-    max-width: 80px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     margin: 8px auto;
 }
 
@@ -347,8 +349,9 @@ div.icon-text-rows > div > img {
     display: block;
     margin: auto 0;
     margin-right: 30px;
-    max-height: 100px;
-    max-width: 100px;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
 }
 
 div.icon-text-rows > div > div.text {
@@ -386,8 +389,9 @@ div.icon-text-blocks > div > img {
     display: block;
     margin: auto 0;
     margin-right: 30px;
-    max-height: 100px;
-    max-width: 100px;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
 }
 
 div.icon-text-blocks > div > div.text {
