@@ -1,22 +1,14 @@
-<!DOCTYPE html>
+<?php
 
-<html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Phoenix Group Bootcamp</title>
-        <link href='css/style.css' rel='stylesheet'>
-        <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
-    </head>
+include_once $_SERVER['PWD'] . '/include/lib.php';
 
-    <body>
+$meta = new PageMeta(
+    title: 'Medical',
+    display_title: false,
+);
 
-<header>
-    <a href='https://discord.gg/3heMP2jtyw'>
-        <img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'>
-    </a>
-    <h1>Bootcamp</h1>
-</header>
-
+begin_page($meta);
+?>
 <div id='wrap'>
     <h1 id='title'>Medical</h1>
 
@@ -430,10 +422,8 @@
         </div>
     </section>
 </div>
+<?php
+end_page($meta);
 
-<footer>
-    <p>Training materials made available by <a href='https://discord.gg/3heMP2jtyw'>Phoenix Group</a>.</p>
-</footer>
+// EOF
 
-    </body>
-</html>
