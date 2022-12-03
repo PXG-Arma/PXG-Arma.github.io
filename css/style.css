@@ -79,11 +79,30 @@ a:hover {
 h1, h2, h3, h4, h5 {
     text-transform: uppercase;
     text-align: center;
+    font-weight: bold;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 28pt;
+    font-size: 32pt;
+    margin: 42px 0 24px;
+}
+
+h2 {
+    font-size: 26pt;
+    margin: 28px 20px;
+}
+
+/*
+ * Basic element variants
+ */
+
+ul.no-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.no-bullets li {
+    margin: 7px 0;
 }
 
 /*
@@ -313,6 +332,45 @@ div.icon-text-rows > div > div.text p {
     margin: 8px 0;
 }
 
+/* Icon-text blocks */
+
+div.icon-text-blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div.icon-text-blocks > div {
+    margin: 10px auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+div.icon-text-blocks > div > img {
+    display: block;
+    margin: auto 0;
+    margin-right: 30px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+div.icon-text-blocks > div > div.text {
+}
+
+div.icon-text-blocks > div > div.text h5 {
+    margin: 0;
+    text-transform: none;
+    text-align: left;
+    font-size: 18pt;
+}
+div.icon-text-blocks > div > div.text p {
+    margin: 8px 0;
+}
+
 /* Banner boxes */
 
 div.banner-container {
@@ -347,7 +405,7 @@ table.dictionary {
 }
 
 table.dictionary td {
-    padding: 6px;
+    padding: 6px 8px;
 }
 
 table.dictionary > tbody > tr > td:first-child {
