@@ -23,7 +23,8 @@
 
     /* Dimensions */
     --dim-header-height: 70px;
-    --dim-page-wrap-width: 1000px;
+    --dim-page-paragraph-width: 1000px;
+    --dim-page-max-width: 1600px;
 }
 
 /*
@@ -111,13 +112,25 @@ ul.no-bullets li {
  * Big page parts
  */
 
-div#wrap {
-    max-width: var(--dim-page-wrap-width);
-    margin: 0 auto;
+section {
+    margin: 47px auto 35px;
 }
 
-section {
-    margin: 47px 0 35px;
+body > section {
+    max-width: var(--dim-page-paragraph-width);
+}
+
+section.wide {
+    max-width: var(--dim-page-max-width);
+}
+
+body > h1,
+body > h2,
+body > h3,
+body > p {
+    max-width: var(--dim-page-paragraph-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*
@@ -174,7 +187,7 @@ footer {
 
 footer p {
     margin: 5px auto;
-    max-width: var(--dim-page-wrap-width);
+    max-width: var(--dim-page-paragraph-width);
 }
 
 footer a {
