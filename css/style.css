@@ -461,3 +461,14 @@ table.dictionary > tbody > tr > td:first-child {
     font-weight: bold;
     text-align: right;
 }
+
+/*
+ * Embedded objects
+ */
+
+/* YouTube video */
+
+iframe.emb-yt {
+    display: block;
+    margin: 0 auto;
+}
