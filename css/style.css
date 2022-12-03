@@ -245,7 +245,12 @@ div.text-blocks {
 
 div.text-blocks > div {
     margin: 20px 26px;
-    max-width: 400px;
+    width: 400px;
+}
+@media screen and not (min-width: 400px) {
+    div.text-blocks > div {
+        width: 90%;
+    }
 }
 
 div.text-blocks h5 {
@@ -277,12 +282,17 @@ div.colour-blocks {
 }
 
 div.colour-blocks > div {
-    max-width: 300px;
+    width: 300px;
     margin: 10px;
     background-color: var(--clr-bg-light);
     color: var(--clr-font-dark);
     border: 3px solid;
     border-color: magenta;
+}
+@media screen and not (min-width: 300px) {
+    div.colour-blocks > div {
+        width: 90%;
+    }
 }
 
 div.colour-blocks > div > div.header {
@@ -391,11 +401,16 @@ div.icon-text-blocks {
 
 div.icon-text-blocks > div {
     margin: 10px auto;
-    max-width: 400px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
+}
+@media screen and not (min-width: 400px) {
+    div.icon-text-blocks > div {
+        width: 90%;
+    }
 }
 
 div.icon-text-blocks > div > img {
