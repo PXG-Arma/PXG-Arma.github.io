@@ -1,5 +1,2 @@
 # Editor swap files
 *.swp
-
-# Temporary generated web site HTML files
-php-sources/build
