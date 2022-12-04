@@ -10,11 +10,19 @@
 
     <body>
 
-<header>
-    <a href='https://discord.gg/3heMP2jtyw'>
-        <img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'>
-    </a>
-    <h1>Bootcamp</h1>
+<header id='top'>
+    <div id='header-background'>
+        <div id='header-content'>
+            <div class='logo-box'>
+                <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+            </div>
+            <div class='title'>
+                <h1>Bootcamp</h1>
+            </div>
+            <!-- For centering the title -->
+            <div class='logo-box'></div>
+        </div>
+    </div>
 </header>
 
 <h1 id='title'>Medical</h1>
@@ -249,11 +257,6 @@
                 <li>Pain relief from morphine is temporary.</li>
                 <li>Does not directly impact consciousness.</li>
             </ul>
-            <div class='banner-container'>
-                <div class='clr-red'>
-                    The generic vital readings used by non-medical personnel must NEVER be used to determine if it is safe to use medication. For example, a "normal" pulse can be dangerously low 45&nbsp;BPM!
-                </div>
-            </div>
         </div>
         <div>
             <h5>Epinephrine</h5>
@@ -263,6 +266,12 @@
                 <li>Do not assume epinephrine is required following morphine. Wait for vitals to settle first.</li>
                 <li>Does not directly impact consciousness.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class='banner-container'>
+        <div class='clr-red'>
+            The generic vital readings used by non-medical personnel must NEVER be used to determine if it is safe to use medication. For example, a "normal" pulse can be dangerously low 45&nbsp;BPM!
         </div>
     </div>
 </section>
@@ -436,7 +445,28 @@
 </section>
 
 <footer>
-    <p>Training materials made available by <a href='https://discord.gg/3heMP2jtyw'>Phoenix Group</a>.</p>
+    <div id='footer-background'>
+        <div id='footer-content'>
+            <div id='footer-icons'>
+                <div id='footer-icons-left'>
+                    <a href='https://discord.gg/3heMP2jtyw'>
+                        <img alt='Discord' title='Discord' src='/img/icons/discord.png'>
+                    </a>
+                    <a href='https://www.youtube.com/@purewar673'>
+                        <img alt='YouTube' title='YouTube' src='/img/icons/youtube.png'>
+                    </a>
+                    <a href='#top'>
+                        <img alt='To Top' title='To Top' src='/img/icons/top.svg'>
+                    </a>
+                </div>
+                <div id='footer-icons-right'>
+                    <a href='/'>
+                        <img alt='Phoenix Group' title='Phoenix Group' src='/img/pxg/logo.png'>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 
     </body>

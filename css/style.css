@@ -5,31 +5,43 @@
 :root {
     /* Colours */
 
-    /* PXG colours */
-    --clr-pxg-orange: #f8951d;
+    /* PXG palette colours */
+
+    /* "Jet" */
+    --clr-pxg-dark: #2d2c2d;
+    /* "Cinnabar" */
     --clr-pxg-red: #f1372a;
+    /* "Yellow Orange Color Wheel */
+    --clr-pxg-orange: #f8951d;
+    /* "Cultured" */
+    --clr-pxg-light: #eaebee;
+    /* "Rich Black FOGRA 39" */
+    --clr-pxg-black: #0a0a0a;
 
     /* Font colours */
-    --clr-font-dark: #2d2c2d;
-    --clr-font-light: #eaebee;
+    --clr-font-dark: var(--clr-pxg-dark);
+    --clr-font-light: var(--clr-pxg-light);
 
     /* Background colours */
-    --clr-bg-dark: #2d2c2d;
-    --clr-bg-light: #eaebee;
+    --clr-bg-dark: var(--clr-pxg-dark);
+    --clr-bg-light: var(--clr-pxg-light);
 
     /* Highlight colours */
     --clr-hl-green: #00953f;
-    --clr-hl-black: #242424;
+    --clr-hl-black: var(--clr-pxg-black);
 
     /* Dimensions */
     --dim-header-height: 70px;
     --dim-page-paragraph-width: 1000px;
     --dim-page-max-width: 1600px;
+    --dim-gradient-line-width: 6px;
 }
 
 /*
  * Custom fonts
  */
+
+/* Philosopher */
 
 @font-face {
     font-family: "Philosopher";
@@ -55,14 +67,40 @@
     font-style: italic;
 }
 
+/* PT Sans */
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("/fonts/pt/PTSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
 /*
  * Basic page looks and typography
  */
 
 html {
     color: var(--clr-font-light);
-    font-family: "Philosopher", sans-serif;
-    font-size: 14pt;
+    font-family: "PT Sans", sans-serif;
+    font-size: 15pt;
 }
 
 body {
@@ -80,6 +118,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5 {
+    font-family: "Philosopher";
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -93,6 +132,10 @@ h1 {
 h2 {
     font-size: 30pt;
     margin: 28px 20px;
+}
+
+h5 {
+    font-size: 18pt;
 }
 
 /*
@@ -139,23 +182,47 @@ body > p {
 
 header {
     width: 100%;
-    height: var(--dim-header-height);
     margin: 0;
+    padding-bottom: var(--dim-gradient-line-width);
+    background: linear-gradient(to right, var(--clr-pxg-orange), var(--clr-pxg-red));
+}
+
+header > div#header-background {
+    width: 100%;
+    background-color: var(--clr-bg-light);
+}
+
+header div#header-content {
+    height: var(--dim-header-height);
+    width: var(--dim-page-paragraph-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: var(--clr-bg-light);
     color: var(--clr-font-dark);
-    border-bottom: 3px solid var(--clr-pxg-red);
+}
+/* CSS variables not supported in a media query. Update manually! */
+@media screen and not (min-width: 1000px) {
+    header div#header-content {
+        width: 100%;
+    }
 }
 
-header > a {
-    display: block;
+header div.logo-box {
+    width: var(--dim-header-height);
+    height: var(--dim-header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-header img#pxg-logo {
+header div.logo-box a {
+    display: block;
+    margin: 0;
+}
+header div.logo-box img#pxg-logo {
     display: block;
     max-width: 100px;
     max-height: calc(var(--dim-header-height) - 2*4px);
@@ -163,8 +230,6 @@ header img#pxg-logo {
 
 header h1 {
     margin: 0;
-    padding: 0;
-    margin-left: 24px;
     text-transform: uppercase;
     font-size: 29pt;
 }
@@ -177,24 +242,55 @@ footer {
     display: block;
     width: 100%;
     margin: 47px 0 0;
+    padding-top: var(--dim-gradient-line-width);
+    background: linear-gradient(to left, var(--clr-pxg-orange), var(--clr-pxg-red));
+}
+
+footer > div#footer-background {
+    width: 100%;
+    background-color: var(--clr-bg-dark);
+}
+
+div#footer-content {
+    max-width: var(--dim-page-paragraph-width);
+    margin: 0 auto;
     padding-top: 16px;
     padding-bottom: 12px;
-    background: linear-gradient(to bottom, var(--clr-pxg-orange), #663800);
     color: var(--clr-font-light);
     text-align: center;
-    border-top: 3px solid var(--clr-pxg-red);
 }
 
-footer p {
-    margin: 5px auto;
-    max-width: var(--dim-page-paragraph-width);
+div#footer-icons {
+    max-width: calc(100vw - 2*10px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-footer a {
-    color: var(--clr-pxg-red);
+div#footer-icons a {
+    display: block;
+    margin: 0 6px;
 }
-footer a:hover {
-    color: var(--clr-font-light);
+
+div#footer-icons a > img {
+    display: block;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+div#footer-icons > div#footer-icons-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+div#footer-icons > div#footer-icons-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 /*
@@ -212,14 +308,12 @@ div.icons-horizontal {
 
 div.icons-horizontal > div {
     margin: 20px;
-    max-width: 200px;
+    max-width: 220px;
     text-align: center;
 }
 
 div.icons-horizontal h5 {
-    font-size: 16pt;
     margin: 0;
-    margin-bottom: 10px;
 }
 
 div.icons-horizontal img {
@@ -227,7 +321,7 @@ div.icons-horizontal img {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    margin: 8px auto;
+    margin: 18px auto;
 }
 
 div.icons-horizontal p {
@@ -258,7 +352,6 @@ div.text-blocks h5 {
     text-align: left;
     text-transform: none;
     font-weight: bold;
-    font-size: 18pt;
 }
 
 div.text-blocks ul {
@@ -303,7 +396,6 @@ div.colour-blocks > div > div.header {
 }
 div.colour-blocks > div > div.header h5 {
     margin: 0;
-    font-size: 16pt;
     font-weight: bold;
 }
 div.colour-blocks > div > div.header p {
@@ -344,10 +436,10 @@ div.colour-blocks > div.clr-red > div.header {
 }
 
 div.colour-blocks > div.clr-black {
-    border-color: black;
+    border-color: var(--clr-pxg-black);
 }
 div.colour-blocks > div.clr-black > div.header {
-    background-color: black;
+    background-color: var(--clr-pxg-black);
 }
 
 /* Icon-text rows */
@@ -384,7 +476,6 @@ div.icon-text-rows > div > div.text h5 {
     margin: 0;
     text-transform: none;
     text-align: left;
-    font-size: 18pt;
 }
 div.icon-text-rows > div > div.text p {
     margin: 8px 0;
@@ -401,13 +492,13 @@ div.icon-text-blocks {
 
 div.icon-text-blocks > div {
     margin: 10px auto;
-    width: 400px;
+    width: 440px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
 }
-@media screen and not (min-width: 400px) {
+@media screen and not (min-width: 460px) {
     div.icon-text-blocks > div {
         width: 90%;
     }
@@ -417,8 +508,8 @@ div.icon-text-blocks > div > img {
     display: block;
     margin: auto 0;
     margin-right: 30px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     object-fit: contain;
 }
 
@@ -427,9 +518,9 @@ div.icon-text-blocks > div > div.text {
 
 div.icon-text-blocks > div > div.text h5 {
     margin: 0;
+    margin-bottom: 9px;
     text-transform: none;
     text-align: left;
-    font-size: 18pt;
 }
 div.icon-text-blocks > div > div.text p {
     margin: 8px 0;
@@ -448,7 +539,7 @@ div.banner-container {
 div.banner-container > div {
     display: inline-block;
     margin: 8px auto;
-    padding: 10px 14px;
+    padding: 12px 18px;
     color: var(--clr-font-light);
     background-color: magenta;
 }
@@ -486,4 +577,5 @@ table.dictionary > tbody > tr > td:first-child {
 iframe.emb-yt {
     display: block;
     margin: 0 auto;
+    max-width: 90vw;
 }
