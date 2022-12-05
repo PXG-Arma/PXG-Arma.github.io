@@ -6,9 +6,13 @@
         <title>Phoenix Group Bootcamp</title>
         <link href='css/style.css' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
+        <script src='/js/main.js'></script>
+        <script src='/js/jquery.min.js'></script>
     </head>
 
     <body>
+
+<noscript>This web site requires JavaScript to function properly.</noscript>
 
 <header id='top'>
     <div id='header-background'>
@@ -23,11 +27,48 @@
                     <h1>Bootcamp</h1>
                 </div>
                 <div id='header-right'>
+                    <div id='header-menu-button'>
+                        <img alt='Menu' title='Menu' src='/img/icons/menu.svg'>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<nav id='main-navigation'>
+    <div id='main-nav-background'>
+        <div id='main-nav-content'>
+            <div class='nav-entry'>
+                <a href='/'>
+                <div class='nav-text'>
+                    <h5>Home</h5>
+                    <p>All about Phoenix Group</p>
+                </div>
+                </a>
+                <div class='nav-decoration'></div>
+            </div>
+            <div class='nav-entry'>
+                <a href='/training'>
+                <div class='nav-text'>
+                    <h5>Training</h5>
+                    <p>Read our training materials</p>
+                </div>
+                </a>
+                <div class='nav-decoration'></div>
+            </div>
+            <div class='nav-entry'>
+                <a href='/members'>
+                <div class='nav-text'>
+                    <h5>Member Info</h5>
+                    <p>Useful information for members</p>
+                </div>
+                </a>
+                <div class='nav-decoration'></div>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <h1 id='title'>Medical</h1>
 
@@ -459,7 +500,7 @@
                     <a href='https://www.youtube.com/@purewar673'>
                         <img alt='YouTube' title='YouTube' src='/img/icons/youtube.png'>
                     </a>
-                    <a href='#top'>
+                    <a id='button-to-top' href='#top'>
                         <img alt='To Top' title='To Top' src='/img/icons/top.svg'>
                     </a>
                 </div>
