@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 
 <html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Phoenix Group</title>
-        <link href='/css/style.css' rel='stylesheet'>
-        <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
-        <script src='/js/main.js'></script>
-        <script src='/js/jquery.min.js'></script>
-    </head>
 
-    <body>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Phoenix Group</title>
+    <link href='/css/style.css' rel='stylesheet'>
+    <link rel='icon' type='image/x-icon' href='/img/pxg/favicon.png'>
+    <script src='/js/main.js'></script>
+    <script src='/js/jquery.min.js'></script>
+</head>
+
+<body>
 
 <noscript>This web site requires JavaScript to function properly.</noscript>
 
@@ -20,7 +22,7 @@
             <div id='header-content'>
                 <div id='header-left'>
                     <div class='logo-box'>
-                        <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo.png'></a>
+                        <a href='/'><img id='pxg-logo' title='Phoenix Group' alt='Phoenix Group logo' src='/img/pxg/logo_text_light.png'></a>
                     </div>
                 </div>
                 <div id='header-center'>
@@ -68,10 +70,13 @@
         </div>
     </div>
 </nav>
+<div id='wrap'>
 
 <div id='video-block'>
     <video autoplay muted loop>
-        <source src='/video/I_should_not_use_tube.mp4' type='video/mp4'>
+        <!--<source src='/video/I_should_not_use_tube.mp4' type='video/mp4'>-->
+        <source src='/video/PXG_Promo.webm'>
+        <source src='/video/PXG_Promo.mp4'>
     </video>
 
     <div id='video-overlay'>
@@ -82,13 +87,15 @@
             <a href='https://discord.gg/3heMP2jtyw'>
                 <button>Join us on Discord</button>
             </a>
-            <button class='light'>Read more</button>
+            <a href='#features'>
+                <button id='button-read-more' class='light'>Read more</button>
+            </a>
         </div>
     </div>
 </div>
 
 <section>
-    <h2>Features</h2>
+    <h2 id='features'>Features</h2>
 
     <div class='feature-blocks'>
         <div>
@@ -115,17 +122,17 @@
 </section>
 
 <section>
-    <h2>Our Trailer</h2>
+    <h2 id='trailer'>Our Trailer</h2>
     <iframe class='emb-yt' width="560" height="315" src="https://www.youtube-nocookie.com/embed/u9pyxjzPg9Q" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 
 <section class='narrow'>
-    <h2>About Us</h2>
+    <h2 id='about-us'>About Us</h2>
     <p>Dear ADK, may Chiko live a long, prosperous life.</p>
 </section>
 
 <section>
-    <h2>Support Us</h2>
+    <h2 id='support-us'>Support Us</h2>
 
     <div class='button-container'>
         <a href='https://billing.gamingdeluxe.co.uk/index.php?m=public_pay&hash_id=b95wE7ZPAmvz'>
@@ -137,6 +144,7 @@
     </div>
 </section>
 
+</div>
 <footer>
     <div id='footer-background'>
         <div id='footer-content'>
@@ -162,5 +170,6 @@
     </div>
 </footer>
 
-    </body>
+</body>
+
 </html>
